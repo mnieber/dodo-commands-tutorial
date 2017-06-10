@@ -12,6 +12,8 @@ DOCKER:
 ROOT:
     build_dir: ${/ROOT/project_dir}/build/${/CMAKE/variables/CMAKE_BUILD_TYPE}
     src_dir: ${/ROOT/project_dir}/src
+    decorators:
+      docker: ['cmake']
     command_path:
     - - ~/.dodo_commands/
       - default_commands/*
