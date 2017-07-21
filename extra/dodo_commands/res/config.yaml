@@ -9,7 +9,7 @@ DOCKER:
   options:
     '*':
       volume_map:
-        /home/maarten/projects/dodo_tutorial/log: /var/log
+        ${/ROOT/project_dir}/log: /var/log
 
 ROOT:
   build_dir: ${/ROOT/project_dir}/build/${/CMAKE/variables/CMAKE_BUILD_TYPE}
