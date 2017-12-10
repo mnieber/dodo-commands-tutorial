@@ -2,6 +2,8 @@
 from dodo_commands.system_commands import DodoCommand
 
 class Command(DodoCommand):  # noqa
+    docker_options = [('name', 'cmake')]
+
     def handle_imp(self, **kwargs):  # noqa
         self.runcmd(
             ["cmake"] +

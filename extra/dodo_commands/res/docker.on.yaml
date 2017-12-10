@@ -1,0 +1,9 @@
+DOCKER:
+  enabled: true
+  options:
+    '*':
+      image: dodo_tutorial:1604
+
+ROOT:
+  decorators:
+    docker: [cmake, docker]
