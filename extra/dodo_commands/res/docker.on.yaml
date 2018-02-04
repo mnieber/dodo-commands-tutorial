@@ -1,7 +1,11 @@
 DOCKER:
+  enabled: true
+  image: dodo_tutorial:1604
   options:
     '*':
-      image: dodo_tutorial:1604
+      image: ${/DOCKER/image}
+      volume_map:
+        ${/ROOT/project_dir}/log: /var/log
 
 ROOT:
   decorators:
