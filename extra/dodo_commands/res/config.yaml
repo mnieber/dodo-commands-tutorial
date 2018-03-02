@@ -3,7 +3,6 @@ CMAKE:
     CMAKE_BUILD_TYPE: release
     CMAKE_INSTALL_PREFIX: ${/ROOT/project_dir}/install
 
-
 ROOT:
   build_dir: ${/ROOT/project_dir}/build/${/CMAKE/variables/CMAKE_BUILD_TYPE}
   src_dir: ${/ROOT/project_dir}/src
