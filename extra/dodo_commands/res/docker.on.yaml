@@ -1,8 +1,8 @@
 DOCKER:
   images:
     base:
+      build_dir: ${/ROOT/src_dir}/docker
       image: dodo_tutorial:1604
-      build_dir: ${/ROOT/res_dir}
   options:
     '*':
       image: ${/DOCKER/images/base/image}
