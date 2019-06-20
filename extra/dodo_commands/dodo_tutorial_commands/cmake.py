@@ -1,7 +1,6 @@
 from argparse import ArgumentParser
 from dodo_commands.framework import Dodo
 
-
 def _args():  # noqa
     parser = ArgumentParser(description='Configure code with CMake')
     args = Dodo.parse_args(parser)
@@ -9,10 +8,9 @@ def _args():  # noqa
     args.build_dir = Dodo.get_config("/ROOT/build_dir")
     return args
 
-
 if Dodo.is_main(__name__):
     args = _args()
-    Dodo.runcmd(
+    Dodo.run(
         ["cmake"] +
         [
             "-D%s=%s" % x for x in
