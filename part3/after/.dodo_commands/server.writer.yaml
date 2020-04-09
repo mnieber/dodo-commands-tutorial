@@ -1,0 +1,10 @@
+MAKE:
+  cwd: ${/ROOT/project_dir}/writer
+
+ROOT:
+  decorators:
+    docker: ["greet"]
+
+DOCKER_OPTIONS:
+  greet:
+    container: dodo_tutorial_writer_1

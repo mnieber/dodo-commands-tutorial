@@ -1,0 +1,22 @@
+version : '3'
+
+services :
+  writer:
+    image: python:3.7-alpine-make
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    volumes:
+      - /tmp/tutorial/writer:/tmp/app
+      - /tmp/tutorial/time.log:/tmp/time.log
+    working_dir: /tmp/app
+    command: make runserver
+
+  reader:
+    depends_on: [writer]
+    image: python:3.7-alpine-make
+    volumes:
+      - /tmp/tutorial/reader:/tmp/app
+      - /tmp/tutorial/time.log:/tmp/time.log
+    working_dir: /tmp/app
+    command: make runserver
