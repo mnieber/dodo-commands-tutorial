@@ -1,6 +1,6 @@
 ROOT:
   command_path:
-  - /home/maarten/.dodo_commands/default_project/commands/*
+  - ~/.dodo_commands/default_project/commands/*
   - ${/ROOT/project_dir}/commands
   version: 1.0.0
   aliases:
@@ -10,7 +10,7 @@ ROOT:
 LAYER_GROUPS:
   server:
   - writer:
-      inferred_by: [greet]
+      inferred_by: [mk-greet]
   - reader
 
 LAYERS:

@@ -3,7 +3,7 @@ MAKE:
 
 ROOT:
   decorators:
-    docker: ["greet"]
+    docker: [mk-greet]
 
 DOCKER_OPTIONS:
   greet:

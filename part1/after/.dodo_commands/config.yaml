@@ -1,7 +1,7 @@
 ROOT:
   command_path:
   - ~/.dodo_commands/default_project/commands/*
-  - /tmp/dodo_part1/commands
+  - ${/ROOT/project_dir}/commands
   version: 1.0.0
   aliases:
     run-writer: writer.mk runserver

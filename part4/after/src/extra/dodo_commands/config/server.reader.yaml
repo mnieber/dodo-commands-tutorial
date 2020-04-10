@@ -1,0 +1,2 @@
+MAKE:
+  cwd: ${/ROOT/project_dir}/reader

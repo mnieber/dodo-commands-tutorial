@@ -7,8 +7,8 @@ services :
       dockerfile: ./Dockerfile
       context: .
     volumes:
-      - /tmp/tutorial/writer:/tmp/app
-      - /tmp/tutorial/time.log:/tmp/time.log
+      - ./writer:/tmp/app
+      - ./time.log:/tmp/time.log
     working_dir: /tmp/app
     command: make runserver
 
@@ -16,7 +16,7 @@ services :
     depends_on: [writer]
     image: python:3.7-alpine-make
     volumes:
-      - /tmp/tutorial/reader:/tmp/app
-      - /tmp/tutorial/time.log:/tmp/time.log
+      - ./reader:/tmp/app
+      - ./time.log:/tmp/time.log
     working_dir: /tmp/app
     command: make runserver

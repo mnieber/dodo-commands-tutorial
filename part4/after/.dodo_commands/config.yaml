@@ -2,10 +2,12 @@ ROOT:
   command_path:
   - ~/.dodo_commands/default_project/commands/*
   - ${/ROOT/project_dir}/commands
-  version: 1.0.0
+  version: 1.1.0
   aliases:
     run-writer: writer.mk runserver
     run-reader: reader.mk runserver
+  src_dir: ${/ROOT/project_dir}/src
+  shared_config_dir: ${/ROOT/src_dir}/extra/dodo_commands/config
 
 LAYER_GROUPS:
   server:
