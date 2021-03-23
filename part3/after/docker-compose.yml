@@ -1,22 +1,20 @@
-version : '3'
-
-services :
+version: "3"
+services:
   writer:
-    image: python:3.7-alpine-make
+    image: dodo_tutorial
     build:
       dockerfile: ./Dockerfile
       context: .
     volumes:
-      - ./writer:/tmp/app
-      - ./time.log:/tmp/time.log
-    working_dir: /tmp/app
+      - ./writer:/app
+      - ./time.log:/time.log
+    working_dir: /app
     command: make runserver
-
   reader:
     depends_on: [writer]
-    image: python:3.7-alpine-make
+    image: dodo_tutorial
     volumes:
-      - ./reader:/tmp/app
-      - ./time.log:/tmp/time.log
-    working_dir: /tmp/app
+      - ./reader:/app
+      - ./time.log:/time.log
+    working_dir: /app
     command: make runserver

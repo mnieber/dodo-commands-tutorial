@@ -3,9 +3,6 @@ ROOT:
   - ~/.dodo_commands/default_project/commands/*
   - ${/ROOT/project_dir}/commands
   version: 1.0.0
-  aliases:
-    run-writer: writer.mk runserver
-    run-reader: reader.mk runserver
 
 LAYER_GROUPS:
   server:
@@ -17,4 +14,3 @@ MENU:
     server:
     - dodo writer.mk runserver
     - dodo reader.mk runserver
-

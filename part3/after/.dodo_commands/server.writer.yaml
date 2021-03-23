@@ -1,10 +1,10 @@
 MAKE:
-  cwd: ${/ROOT/project_dir}/writer
+  cwd: /app
 
 ROOT:
   decorators:
     docker: [mk-greet]
 
 DOCKER_OPTIONS:
-  greet:
-    container: dodo_tutorial_writer_1
+  mk-greet:
+    container: tutorial_writer_1
