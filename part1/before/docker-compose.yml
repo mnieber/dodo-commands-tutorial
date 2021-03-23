@@ -1,0 +1,20 @@
+version: "3"
+services:
+  writer:
+    image: dodo_tutorial
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    volumes:
+      - ./writer:/app
+      - ./time.log:/time.log
+    working_dir: /app
+    command: make runserver
+  reader:
+    depends_on: [writer]
+    image: dodo_tutorial
+    volumes:
+      - ./reader:/app
+      - ./time.log:/time.log
+    working_dir: /app
+    command: make runserver
